@@ -7,25 +7,18 @@ const formData = [
 		type: 'text',
 	},
 	{
-		fieldName: 'gender',
-		placeholder: '',
-		value: thisField => thisField.state.gender,
-		label: 'Male',
-		type: 'radio',
+		fieldName: 'home',
+		placeholder: 'Seattle, WA, USA',
+		value: thisField => thisField.state.home,
+		label: 'Where did our brave stargazer grow up?',
+		type: 'text',
 	},
 	{
 		fieldName: 'gender',
-		placeholder: '',
+		placeholder: 'Sir',
 		value: thisField => thisField.state.gender,
-		label: 'Female',
-		type: 'radio',
-	},
-	{
-		fieldName: 'gender',
-		placeholder: '',
-		value: thisField => thisField.state.gender,
-		label: 'Other',
-		type: 'radio',
+		label: 'How should the captain be addressed? Sir? Ma\'am? Mx?',
+		type: 'text',
 	}
 ];
 
