@@ -1,7 +1,14 @@
 import React from 'react';
+import { SketchPicker } from 'react-color';
 import styled from 'styled-components';
+import ColorPicker from '../colorPicker/colorPicker';
 
 import formData from './characterFormData';
+
+const InputLabel = styled.label`
+	display: block;
+	margin-bottom: 15px;
+`;
 
 const emptyState = {
 	name: '',
@@ -39,8 +46,7 @@ class CharacterUI extends React.Component {
 								onChange={this.handleChange}
 								type={currentInput.type}
 							/>
-							<label htmlFor={currentInput.fieldName}>{currentInput.label}</label>
-							<br />
+							<InputLabel htmlFor={currentInput.fieldName}>{currentInput.label}</InputLabel>
 						</React.Fragment>						
 					)}
 					<textarea 
@@ -51,7 +57,9 @@ class CharacterUI extends React.Component {
 						value={this.state.bio}
 						onChange={this.handleChange}
 					></textarea>
-					<label htmlFor='bio'>What tragic and riveting backstory does our brave hero boast about?</label>
+					<InputLabel htmlFor='bio'>What tragic and riveting backstory does our brave hero boast about?</InputLabel>
+					<ColorPicker name='character-color'/>
+					<InputLabel htmlFor='character-color'>What color is our intrepid traveler?</InputLabel>
 				</form>
 			</div>
 		);
